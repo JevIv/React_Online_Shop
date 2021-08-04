@@ -5,20 +5,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import createStore from "./store";
+import 'semantic-ui-css/semantic.min.css'
+import './app.css'
 
 const store = createStore();
-
-setTimeout(function () {
-    store.dispatch({
-        type: 'SET_BOOK',
-        payload: [
-            {
-                id:0,
-                title: 'Just book!'
-            }
-        ]
-    });
-}, 1000);
 
 ReactDOM.render(
     <Provider store={store}>

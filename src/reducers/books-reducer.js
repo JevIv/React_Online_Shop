@@ -5,7 +5,7 @@ const ADD_BOOKS = 'ADD_BOOKS';
 
 const initialState = {
     isReady: false,
-    books: null,
+    items: null,
 };
 
 export default (state=initialState, action) => {
@@ -13,7 +13,7 @@ export default (state=initialState, action) => {
         case SET_BOOK:
             return {
                 ...state,
-                books: action.payload,
+                items: action.payload,
                 isReady: true,
             };
 /*        case ADD_BOOKS:
