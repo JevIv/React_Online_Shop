@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from "react-redux";
 import './index.css';
-import App from './App';
+import AppContainer from './containers/AppContainer';
 import reportWebVitals from './reportWebVitals';
 import createStore from "./store";
 import 'semantic-ui-css/semantic.min.css'
@@ -12,7 +12,7 @@ const store = createStore();
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <AppContainer />
     </Provider>,
   document.getElementById('root')
 );

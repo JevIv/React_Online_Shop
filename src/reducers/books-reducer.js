@@ -1,6 +1,5 @@
 const SET_BOOK = 'SET_BOOK';
 const SET_IS_READY = 'SET_IS_READY';
-const ADD_BOOKS = 'ADD_BOOKS';
 
 
 const initialState = {
@@ -16,19 +15,11 @@ export default (state=initialState, action) => {
                 items: action.payload,
                 isReady: true,
             };
-/*        case ADD_BOOKS:
-            return {
-                books: [
-                    ...state.books,
-                    action.payload
-                ]
-            };*/
         case SET_IS_READY:
             return {
                 ...state,
                 isReady: action.payload
             }
-            break;
         default:
             return state;
     }
