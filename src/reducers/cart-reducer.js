@@ -1,5 +1,5 @@
-const ADD_BOOK = 'ADD_BOOK';
-const REMOVE_BOOK = 'REMOVE_BOOK';
+const ADD_TO_CART = 'ADD_TO_CART';
+const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 
 
 const initialState = {
@@ -8,7 +8,7 @@ const initialState = {
 
 export default (state=initialState, action) => {
     switch (action.type) {
-        case ADD_BOOK:
+        case ADD_TO_CART:
             return {
                 ...state,
                 items: [
@@ -16,7 +16,7 @@ export default (state=initialState, action) => {
                     action.payload
                 ],
             };
-        case REMOVE_BOOK:
+        case REMOVE_FROM_CART:
             return {
                 ...state,
                 items: state.items.filter(o => o.id != action.payload)

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Container } from "semantic-ui-react";
 import axios from 'axios';
-import MenuComponent from "./menu";
-import BookCard from "./bookCard";
 import { Card } from 'semantic-ui-react';
 import FilterContainer from "../containers/FilterContainer";
+import MenuContainer from "../containers/MenuContainer";
+import BookCardContainer from "../containers/BookCardContainer";
 
 
 class App extends Component {
@@ -20,14 +20,14 @@ class App extends Component {
         const { books, isReady } = this.props;
         return (
             <Container>
-                <MenuComponent />
+                <MenuContainer />
                 <FilterContainer />
                 <Card.Group itemsPerRow={4}>
                     {
                         ! isReady
                         ? 'Loading...'
                         : books.map((book, i) =>(
-                            <BookCard key={i} {...book}/>
+                            <BookCardContainer key={i} {...book}/>
                     ))}
                 </Card.Group>
             </Container>
